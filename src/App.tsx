@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import { useForm  } from "react-hook-form";
+import {
+  Button,
+  Box
+} from "@mui/material";
+import { TextInput } from './atoms/TextInput/TextInput';
 function App() {
+  const { control, handleSubmit } = useForm();
+
+  const handleOnSubmit = (evt:any) => {
+    console.log(evt);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+       <Box component="form" onSubmit={handleSubmit(handleOnSubmit)}>
+          <TextInput propertyName="recipeName" label="Recipe Name" value="" control={control}></TextInput>
+          <TextInput propertyName="test1" label="test1" value="" control={control}></TextInput>
+          <TextInput propertyName="test2" label="test2" value="" control={control}></TextInput>
+          <TextInput propertyName="test3" label="test3" value="" control={control}></TextInput>
+          <TextInput propertyName="test4" label="test4" value="" control={control}></TextInput>
+          <Button type="submit">Submit</Button>
+       </Box>
     </div>
   );
 }
