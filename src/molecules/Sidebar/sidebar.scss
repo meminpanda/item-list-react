@@ -1,0 +1,46 @@
+@import "../../sass/variables";
+.sidebar {
+  &-header {
+    background-color: $primary-color;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 0px 0px 15px;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.13);
+    &-text {
+    }
+  }
+  &-menu {
+    padding: 20px 30px;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid $primary-color;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.13);
+    &-title {
+      color: $primary-color;
+      font-weight: 600;
+    }
+    &-item {
+      padding: 10px 15px;
+      margin: 5px 0px;
+      cursor: pointer;
+      &:hover,
+      &.active {
+        color: white;
+        background-color: $primary-color;
+        border-radius: 15px;
+      }
+    }
+    &-division {
+      margin: 15px 0px;
+      border-color: $primary-color;
+    }
+  }
+}

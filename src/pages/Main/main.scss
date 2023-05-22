@@ -1,0 +1,12 @@
+.main-page {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  &-sidebar {
+    width: 25%;
+  }
+  &-content {
+    width: 75%;
+  }
+}
