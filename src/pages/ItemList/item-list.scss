@@ -1,0 +1,12 @@
+.item-list {
+  padding: 14px 30px;
+  &-actions {
+  }
+  &-view {
+    display: flex;
+    margin-top: 30px;
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}

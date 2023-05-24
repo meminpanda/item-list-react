@@ -1,0 +1,77 @@
+@import "../../sass/variables";
+
+.card {
+  width: 250px;
+  position: relative;
+  border-radius: 4px;
+  &.beverage {
+    border: 1px solid $accent-color-1;
+  }
+  &.carbs {
+    border: 1px solid $accent-color-2;
+  }
+  &.protein {
+    border: 1px solid $accent-color-3;
+  }
+  &.dairy {
+    border: 1px solid $accent-color-4;
+  }
+  &.fruit {
+    border: 1px solid $accent-color-5;
+  }
+  &.sweets {
+    border: 1px solid $accent-color-6;
+  }
+  &.vegetable {
+    border: 1px solid $accent-color-7;
+  }
+  &.oil {
+    border: 1px solid $accent-color-8;
+  }
+  &.spice {
+    border: 1px solid $accent-color-9;
+  }
+  &-body{
+    &-quantity{
+      font-weight: 700;
+    }
+  }
+  &-label {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 100;
+    padding: 7px 19px;
+    border-radius: 14px;
+    color: white;
+    &.beverage {
+      background-color: $accent-color-1;
+    }
+    &.carbs {
+      background-color: $accent-color-2;
+    }
+    &.protein {
+      background-color: $accent-color-3;
+    }
+    &.dairy {
+      background-color: $accent-color-4;
+    }
+    &.fruit {
+      background-color: $accent-color-5;
+    }
+    &.sweets {
+      background-color: $accent-color-6;
+    }
+    &.vegetable {
+      background-color: $accent-color-7;
+    }
+    &.oil {
+      background-color: $accent-color-8;
+    }
+    &.spice {
+      background-color: $accent-color-9;
+    }
+  }
+}

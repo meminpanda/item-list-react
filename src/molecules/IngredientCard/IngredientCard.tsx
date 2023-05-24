@@ -6,14 +6,16 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Ingredient } from "../../interfaces/Ingredient";
+import noImage from "../../assets/images/default.jpg"
+
 
 function IngredientCard(ingredient: Ingredient) {
   return (
-  <div className="card">
-    <Card sx={{ maxWidth: 345 }}>
+  <div className={`card ${ingredient.foodType}`}>
+    <Card sx={{ maxWidth: 250 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={ingredient.image}
+        image={ingredient.image ? ingredient.image: noImage}
         title={ingredient.name}
       />
       <CardContent>
@@ -21,7 +23,7 @@ function IngredientCard(ingredient: Ingredient) {
           {ingredient.name}
         </Typography>
         <div className="card-body">
-          
+          Current inventory: <span className="card-body-quantity">{ingredient.quantity} {ingredient.quantityType}</span>
         </div>
       </CardContent>
       <CardActions>
@@ -29,6 +31,7 @@ function IngredientCard(ingredient: Ingredient) {
         <Button size="small">Delete</Button>
       </CardActions>
     </Card>
+    <span className={`card-label ${ingredient.foodType}`}>{ingredient.foodType}</span>
   </div>
   )
 }
