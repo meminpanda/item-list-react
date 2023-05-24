@@ -10,7 +10,8 @@ function App() {
       element: <MainPage />,
       children: [
         {
-          path: "list",
+          index: true,
+          path: "",
           element: <ItemList />,
         },
       ],
